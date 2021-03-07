@@ -1,7 +1,17 @@
 import fetch from "node-fetch";
 
+
+function sleep(ms:number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function getData() {
+  return await fetch('https://jsonplaceholder.typicode.com/posts/1')
+}
+
 async function main() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts/1')
+  await sleep(3000);
+  const response = await getData();
   console.log(await response.json());
 }
 

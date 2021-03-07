@@ -12,7 +12,8 @@
       "smartStep": true,
       "skipFiles": [
         "<node_internals>/**",
-        "node_modules/**"
+        "node_modules/**",
+        "dist/**"
       ],
       "type": "pwa-node",
       "outFiles": [
